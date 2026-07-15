@@ -6,7 +6,8 @@ import { Resend } from 'resend';
 const app = express();
 const PORT = process.env.PORT || 3000;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const resend = new Resend(process.env.RESEND_API_KEY);
+
+const getResend = () => new Resend(process.env.RESEND_API_KEY);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'dist')));
@@ -14,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.post('/api/enquiry', async (req, res) => {
   const form = req.body;
   try {
-    await resend.emails.send({
+    await getResend().emails.send({
       from: 'Venom Group Website <noreply@venomgroup.co.uk>',
       to: 'info@venomgroup.co.uk',
       replyTo: form.email,
