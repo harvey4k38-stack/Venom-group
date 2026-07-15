@@ -1,13 +1,21 @@
 import express from 'express';
 import { fileURLToPath } from 'url';
 import path from 'path';
-import { Resend } from 'resend';
+import nodemailer from 'nodemailer';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const getResend = () => new Resend(process.env.RESEND_API_KEY);
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST || 'smtp.hostinger.com',
+  port: Number(process.env.SMTP_PORT) || 465,
+  secure: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'dist')));
@@ -15,8 +23,8 @@ app.use(express.static(path.join(__dirname, 'dist')));
 app.post('/api/enquiry', async (req, res) => {
   const form = req.body;
   try {
-    await getResend().emails.send({
-      from: 'Venom Group Website <noreply@venomgroup.co.uk>',
+    await transporter.sendMail({
+      from: `"Venom Group Website" <${process.env.SMTP_USER}>`,
       to: 'info@venomgroup.co.uk',
       replyTo: form.email,
       subject: `New Wholesale Enquiry — ${form.companyName}`,
@@ -31,7 +39,6 @@ app.post('/api/enquiry', async (req, res) => {
               <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#666;width:40%">Full Name</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-weight:600;color:#222">${form.fullName}</td></tr>
               <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#666">Company</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-weight:600;color:#222">${form.companyName}</td></tr>
               <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#666">Email</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-weight:600;color:#222">${form.email}</td></tr>
-              <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#666">Phone</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-weight:600;color:#222">${form.phoneNumber}</td></tr>
               <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#666">Business Type</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-weight:600;color:#222">${form.businessType}</td></tr>
               <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#666">Weekly Order</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-weight:600;color:#222">${form.estimatedWeeklyOrder}</td></tr>
               <tr><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;color:#666">Delivery Area</td><td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-weight:600;color:#222">${form.deliveryLocation}</td></tr>
