@@ -1,0 +1,6 @@
+{
+  "name": "Venom Group",
+  "description": "Premium wholesale fruit and vegetable supplier to restaurants, hotels, schools, and food service businesses across the UK.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
