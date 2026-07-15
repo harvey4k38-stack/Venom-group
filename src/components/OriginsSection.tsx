@@ -14,7 +14,7 @@ const origins = [
     region: "Central America",
     produce: ["Pineapple", "Banana", "Tropical"],
     description: "Sun-drenched volcanic soils produce world-class pineapples with unmatched sweetness and consistent sizing year-round.",
-    image: "https://images.unsplash.com/photo-1596273312116-9e98a28c9f8b?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?q=80&w=1200&auto=format&fit=crop",
     accent: "from-emerald-900/90"
   },
   {
