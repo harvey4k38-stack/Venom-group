@@ -50,14 +50,6 @@ export default function CtaSection({ onRequestQuote }: CtaSectionProps) {
                 <ArrowRight className="w-5 h-5 text-leaf transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
-              {/* Call support */}
-              <a
-                href="tel:+442080001234"
-                className="w-full sm:w-auto flex items-center justify-center gap-2 font-display text-base font-semibold bg-white/10 backdrop-blur-md text-white border border-white/20 py-4 px-8 rounded-full hover:bg-white/20 hover:border-white/30 transition-all duration-300"
-              >
-                <PhoneCall className="w-5 h-5 text-leaf" />
-                <span>Call Us Today: +44 208 000 1234</span>
-              </a>
             </div>
 
             <p className="text-gray-300 font-mono text-[10px] tracking-widest uppercase pt-2">

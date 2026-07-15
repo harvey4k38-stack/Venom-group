@@ -164,9 +164,6 @@ export default function Footer() {
             </h4>
             <div className="space-y-3 text-sm leading-relaxed font-light text-gray-400">
               <p>
-                <strong>Trading Desk:</strong> +44 (0) 208 000 1234
-              </p>
-              <p>
                 <strong>Main Email:</strong> info@venomgroup.co.uk
               </p>
               <p>

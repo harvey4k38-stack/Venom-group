@@ -452,24 +452,6 @@ export default function EnquiryForm({ selectedProducts, onClearSelectedProducts 
               
               <div className="space-y-6">
                 
-                {/* Phone */}
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-forest/10 text-forest flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5" />
-                  </div>
-                  <div className="space-y-1">
-                    <h4 className="font-display font-bold text-xs uppercase tracking-widest text-gray-400">
-                      TELEPHONE LINE
-                    </h4>
-                    <p className="font-display font-extrabold text-lg text-charcoal">
-                      <a href="tel:+442080001234" className="hover:text-forest transition-colors">
-                        +44 (0) 208 000 1234
-                      </a>
-                    </p>
-                    <p className="text-gray-500 font-sans text-xs">Direct to wholesale trading specialists.</p>
-                  </div>
-                </div>
-
                 {/* Email */}
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-forest/10 text-forest flex items-center justify-center shrink-0">
