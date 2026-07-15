@@ -37,7 +37,7 @@ export const IMAGES = {
   industryCareHomes: "https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=800&auto=format&fit=crop",
   industryRetail: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop",
   industryHospitality: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=800&auto=format&fit=crop",
-  industryManufacturers: "https://images.unsplash.com/photo-1661962510909-4be27f3637a2?q=80&w=800&auto=format&fit=crop",
+  industryManufacturers: "https://images.unsplash.com/photo-1664298447595-f6288c126fe2?q=80&w=800&auto=format&fit=crop",
   industryWholesalers: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop",
 };
 

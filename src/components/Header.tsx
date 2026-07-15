@@ -4,15 +4,14 @@
  */
 
 import { useState, useEffect } from "react";
-import { Menu, X, ArrowRight, ShoppingCart } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface HeaderProps {
-  selectedCount: number;
   onRequestQuote: () => void;
 }
 
-export default function Header({ selectedCount, onRequestQuote }: HeaderProps) {
+export default function Header({ onRequestQuote }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -143,7 +142,7 @@ export default function Header({ selectedCount, onRequestQuote }: HeaderProps) {
           <div className="flex items-center gap-4">
             <button
               onClick={onRequestQuote}
-              className={`relative hidden sm:flex items-center gap-2 font-display text-sm font-semibold tracking-wide py-2.5 px-6 rounded-full transition-all duration-300 overflow-hidden cursor-pointer shadow-md group ${
+              className={`hidden sm:flex items-center gap-2 font-display text-sm font-semibold tracking-wide py-2.5 px-6 rounded-full transition-all duration-300 cursor-pointer shadow-md group ${
                 isScrolled
                   ? "bg-forest text-white hover:bg-forest-hover shadow-forest/10 hover:shadow-forest/20"
                   : "bg-white text-forest hover:bg-light-grey"
@@ -151,27 +150,7 @@ export default function Header({ selectedCount, onRequestQuote }: HeaderProps) {
             >
               <span>Request A Quote</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-              
-              {/* Dynamic Basket Counter Badge */}
-              {selectedCount > 0 && (
-                <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-leaf text-[10px] font-bold text-white ring-2 ring-white animate-bounce">
-                  {selectedCount}
-                </span>
-              )}
             </button>
-
-            {/* Mobile Quote Icon (Only visible on tiny screens when counter > 0) */}
-            {selectedCount > 0 && (
-              <button
-                onClick={onRequestQuote}
-                className="relative flex sm:hidden p-2 rounded-full bg-leaf text-white cursor-pointer shadow"
-              >
-                <ShoppingCart className="w-5 h-5" />
-                <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-forest text-[8px] font-bold text-white">
-                  {selectedCount}
-                </span>
-              </button>
-            )}
 
             {/* Hamburger Toggle */}
             <button

@@ -3,17 +3,12 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, ShieldCheck, Printer, RefreshCw } from "lucide-react";
 import { EnquiryFormState } from "../types";
 
-interface EnquiryFormProps {
-  selectedProducts: string[];
-  onClearSelectedProducts: () => void;
-}
-
-export default function EnquiryForm({ selectedProducts, onClearSelectedProducts }: EnquiryFormProps) {
+export default function EnquiryForm() {
   const [form, setForm] = useState<EnquiryFormState>({
     fullName: "",
     companyName: "",
@@ -30,15 +25,6 @@ export default function EnquiryForm({ selectedProducts, onClearSelectedProducts 
   const [isSuccess, setIsSuccess] = useState(false);
   const [refNumber, setRefNumber] = useState("");
 
-  // Sync selected products from the catalog into the form's state
-  useEffect(() => {
-    if (selectedProducts.length > 0) {
-      setForm((prev) => ({
-        ...prev,
-        productsRequired: Array.from(new Set([...prev.productsRequired, ...selectedProducts]))
-      }));
-    }
-  }, [selectedProducts]);
 
   const businessTypes = [
     "Restaurant / Fine Dining",
@@ -117,7 +103,6 @@ export default function EnquiryForm({ selectedProducts, onClearSelectedProducts 
       deliveryLocation: "",
       message: ""
     });
-    onClearSelectedProducts();
     setIsSuccess(false);
   };
 
@@ -284,31 +269,25 @@ export default function EnquiryForm({ selectedProducts, onClearSelectedProducts 
 
                   {/* Checkboxes: Products Required */}
                   <div className="space-y-3">
-                    <label className="font-display text-xs font-bold uppercase text-gray-500 tracking-wider flex items-center justify-between">
-                      <span>Products Required</span>
-                      {selectedProducts.length > 0 && (
-                        <span className="text-leaf text-[10px] lowercase normal-case">
-                          ({selectedProducts.length} added from catalog)
-                        </span>
-                      )}
+                    <label className="font-display text-xs font-bold uppercase text-gray-500 tracking-wider">
+                      Products Required
                     </label>
                     
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                       {standardProductCategories.map((cat) => {
-                        const isPreselected = form.productsRequired.includes(cat) || selectedProducts.some(p => p.toLowerCase().includes(cat.toLowerCase().replace("fresh ", "").replace("salad leaves", "salads")));
                         const isChecked = form.productsRequired.includes(cat);
                         return (
                           <label
                             key={cat}
                             className={`flex items-center gap-2.5 p-3 rounded-xl border cursor-pointer select-none transition-all ${
-                              isChecked || isPreselected
+                              isChecked
                                 ? "bg-forest/5 border-forest/30 text-forest font-semibold"
                                 : "bg-white border-gray-200 text-gray-600 hover:border-gray-300"
                             }`}
                           >
                             <input
                               type="checkbox"
-                              checked={isChecked || isPreselected}
+                              checked={isChecked}
                               onChange={() => handleCheckboxChange(cat)}
                               className="accent-forest cursor-pointer"
                             />
