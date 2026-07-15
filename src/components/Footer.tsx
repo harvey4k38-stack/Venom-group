@@ -167,7 +167,7 @@ export default function Footer() {
                 <strong>Trading Desk:</strong> +44 (0) 208 000 1234
               </p>
               <p>
-                <strong>Main Email:</strong> enquiries@venomgroup.co.uk
+                <strong>Main Email:</strong> info@venomgroup.co.uk
               </p>
               <p>
                 <strong>London Depot:</strong> Terminal 4, New Covent Garden Market, London, CR4 4HR

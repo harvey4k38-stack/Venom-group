@@ -79,7 +79,7 @@ export default function EnquiryForm({ selectedProducts, onClearSelectedProducts 
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.fullName || !form.companyName || !form.email || !form.phoneNumber || !form.businessType || !form.estimatedWeeklyOrder || !form.deliveryLocation) {
       alert("Please fill in all required fields marked with *");
@@ -88,13 +88,21 @@ export default function EnquiryForm({ selectedProducts, onClearSelectedProducts 
 
     setIsSubmitting(true);
 
-    // Simulate luxury API submission delay
-    setTimeout(() => {
+    try {
+      const res = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
+      if (!res.ok) throw new Error('Failed');
       const generatedRef = `VEN-2026-${Math.floor(10000 + Math.random() * 90000)}`;
       setRefNumber(generatedRef);
-      setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1500);
+    } catch {
+      alert('Something went wrong. Please email us directly at info@venomgroup.co.uk');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
@@ -472,8 +480,8 @@ export default function EnquiryForm({ selectedProducts, onClearSelectedProducts 
                       EMAIL ADDRESS
                     </h4>
                     <p className="font-display font-extrabold text-base text-charcoal">
-                      <a href="mailto:enquiries@venomgroup.co.uk" className="hover:text-forest transition-colors">
-                        enquiries@venomgroup.co.uk
+                      <a href="mailto:info@venomgroup.co.uk" className="hover:text-forest transition-colors">
+                        info@venomgroup.co.uk
                       </a>
                     </p>
                     <p className="text-gray-500 font-sans text-xs">Send spreadsheet lists or RFPs directly.</p>
