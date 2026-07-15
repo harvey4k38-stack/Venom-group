@@ -22,7 +22,7 @@ export const IMAGES = {
   categoryFruit: "https://images.unsplash.com/photo-1482508809494-03688cd42e7e?q=80&w=800&auto=format&fit=crop",
   categoryVeg: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=800&auto=format&fit=crop",
   categorySalad: "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop",
-  categoryHerbs: "https://images.unsplash.com/DvBYcLkxwvk?q=80&w=800&auto=format&fit=crop",
+  categoryHerbs: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=800&auto=format&fit=crop",
   categoryExotics: "https://images.unsplash.com/photo-1534531173927-aeb928d54385?q=80&w=800&auto=format&fit=crop",
   categoryPrepared: "https://images.unsplash.com/photo-1567137827022-fbe18eff7275?q=80&w=800&auto=format&fit=crop",
 
