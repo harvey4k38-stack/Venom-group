@@ -51,7 +51,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-charcoal text-gray-400 font-sans pt-20 pb-10 border-t border-white/10 relative">
+    <footer className="bg-charcoal text-gray-400 font-sans pt-20 pb-10 border-t border-white/10 relative" style={{ paddingBottom: `max(2.5rem, calc(2.5rem + env(safe-area-inset-bottom)))` }}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Main Four-Column Grid */}

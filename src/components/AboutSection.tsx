@@ -27,7 +27,7 @@ export default function AboutSection({ onLearnMore }: AboutSectionProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
           
           {/* Left Side: Large premium imagery with decorative overlay */}
-          <div className="lg:col-span-6 relative flex flex-col justify-center">
+          <div className="lg:col-span-6 relative flex flex-col justify-center mb-8 sm:mb-0">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -50,7 +50,7 @@ export default function AboutSection({ onLearnMore }: AboutSectionProps) {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="absolute -bottom-6 -right-4 sm:right-6 bg-white/95 backdrop-blur-md p-6 rounded-[20px] shadow-lg border border-black/5 flex items-center gap-4 max-w-[280px]"
+              className="hidden sm:flex absolute -bottom-6 right-4 bg-white/95 backdrop-blur-md p-5 rounded-[20px] shadow-lg border border-black/5 items-center gap-4 max-w-[260px]"
             >
               <div className="p-3 bg-forest/10 rounded-xl text-forest">
                 <CalendarClock className="w-6 h-6" />
@@ -67,7 +67,7 @@ export default function AboutSection({ onLearnMore }: AboutSectionProps) {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="absolute -top-6 -left-4 bg-forest text-white py-2 px-4 rounded-xl shadow-lg flex items-center gap-2"
+              className="hidden sm:flex absolute -top-4 left-4 bg-forest text-white py-2 px-4 rounded-xl shadow-lg items-center gap-2"
             >
               <Sparkles className="w-4 h-4 text-leaf fill-leaf/10" />
               <span className="font-mono text-[10px] font-bold uppercase tracking-wider">BRCGS Double-A Rated</span>

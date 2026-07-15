@@ -18,13 +18,40 @@
 /* Custom smooth scrolling */
 html {
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 body {
   font-family: var(--font-sans);
-  background-color: #F5F5F5; /* Soft Bento grey background so white cards pop */
+  background-color: #F5F5F5;
   color: var(--color-charcoal);
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  min-height: -webkit-fill-available;
+}
+
+/* Remove iOS tap highlight on all interactive elements */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent double-tap zoom on buttons/links */
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* iOS safe area utility classes */
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.pl-safe {
+  padding-left: env(safe-area-inset-left);
+}
+.pr-safe {
+  padding-right: env(safe-area-inset-right);
 }
 
 /* Bento custom classes */

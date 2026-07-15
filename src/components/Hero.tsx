@@ -14,7 +14,7 @@ interface HeroProps {
 
 export default function Hero({ onRequestQuote, onViewProducts }: HeroProps) {
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-charcoal">
+    <section id="home" className="relative min-h-[100svh] flex items-center justify-center overflow-hidden bg-charcoal">
       {/* Absolute background image with dark cinematic overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -72,7 +72,7 @@ export default function Hero({ onRequestQuote, onViewProducts }: HeroProps) {
       </motion.div>
 
       {/* Hero Content Container */}
-      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 w-full pt-32 pb-20">
+      <div className="relative z-20 max-w-7xl mx-auto px-5 md:px-12 w-full pt-28 pb-16 md:pt-32 md:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           <div className="lg:col-span-8 text-left space-y-8">
@@ -95,7 +95,7 @@ export default function Hero({ onRequestQuote, onViewProducts }: HeroProps) {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[0.95]"
+                className="font-display font-extrabold text-[2.4rem] sm:text-5xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[0.95]"
               >
                 Fresh Produce.
                 <br />

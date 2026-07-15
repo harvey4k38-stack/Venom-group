@@ -102,7 +102,7 @@ export default function IndustriesSection() {
         </div>
 
         {/* Alternating Sections List */}
-        <div className="space-y-24 md:space-y-36">
+        <div className="space-y-16 md:space-y-36">
           {industries.map((ind, index) => {
             const isEven = index % 2 === 0;
             return (
@@ -135,7 +135,7 @@ export default function IndustriesSection() {
                   </motion.div>
 
                   {/* Aesthetic index number overlay */}
-                  <div className={`absolute -top-6 ${isEven ? "-left-4" : "-right-4"} bg-white text-gray-300 font-display font-black text-6xl px-4 py-1 rounded-[20px] select-none leading-none z-10 border border-black/5 shadow-sm`}>
+                  <div className={`hidden sm:block absolute -top-6 ${isEven ? "-left-4" : "-right-4"} bg-white text-gray-300 font-display font-black text-6xl px-4 py-1 rounded-[20px] select-none leading-none z-10 border border-black/5 shadow-sm`}>
                     {(index + 1).toString().padStart(2, "0")}
                   </div>
                 </div>

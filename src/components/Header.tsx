@@ -73,6 +73,7 @@ export default function Header({ selectedCount, onRequestQuote }: HeaderProps) {
             ? "bg-white/95 backdrop-blur-md shadow-md py-4 border-b border-light-grey"
             : "bg-transparent py-6"
         }`}
+        style={{ paddingTop: `max(${isScrolled ? "1rem" : "1.5rem"}, calc(${isScrolled ? "1rem" : "1.5rem"} + env(safe-area-inset-top)))` }}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
           {/* Logo Section */}
@@ -206,6 +207,7 @@ export default function Header({ selectedCount, onRequestQuote }: HeaderProps) {
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className="absolute right-0 top-0 h-full w-4/5 max-w-sm bg-white shadow-2xl p-8 flex flex-col justify-between"
+              style={{ paddingTop: `max(2rem, calc(2rem + env(safe-area-inset-top)))`, paddingBottom: `max(1.5rem, calc(1.5rem + env(safe-area-inset-bottom)))` }}
               onClick={(e) => e.stopPropagation()}
             >
               <div className="space-y-8">
