@@ -21,7 +21,7 @@ export default function Header({ onRequestQuote }: HeaderProps) {
       setIsScrolled(window.scrollY > 20);
 
       // Track active section for indicator line
-      const sections = ["home", "products", "industries", "about", "delivery", "contact"];
+      const sections = ["home", "products", "origins", "industries", "about", "delivery", "contact"];
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -44,6 +44,7 @@ export default function Header({ onRequestQuote }: HeaderProps) {
   const menuItems = [
     { id: "home", label: "Home" },
     { id: "products", label: "Products" },
+    { id: "origins", label: "Origins" },
     { id: "industries", label: "Industries" },
     { id: "about", label: "About" },
     { id: "delivery", label: "Delivery" },

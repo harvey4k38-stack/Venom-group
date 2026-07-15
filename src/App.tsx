@@ -13,6 +13,7 @@ import IndustriesSection from "./components/IndustriesSection";
 import DeliverySection from "./components/DeliverySection";
 import Testimonials from "./components/Testimonials";
 import CtaSection from "./components/CtaSection";
+import OriginsSection from "./components/OriginsSection";
 import EnquiryForm from "./components/EnquiryForm";
 import Footer from "./components/Footer";
 
@@ -38,6 +39,7 @@ export default function App() {
       <AboutSection onLearnMore={() => scrollToSection("delivery")} />
       <ProductsSection onRequestQuote={() => scrollToSection("contact")} />
       <WhyChooseUs />
+      <OriginsSection />
       <IndustriesSection />
       <DeliverySection />
       <Testimonials />
