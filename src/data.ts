@@ -48,13 +48,13 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Hand-selected, perfectly ripe seasonal and staple fruits sourced from leading global growers.",
     image: IMAGES.categoryFruit,
     popularItems: [
-      { id: "fr-1", name: "Premium Strawberries", typicalPackSize: "10 x 400g Punnet", origin: "Kent, UK / Spain", description: "Sweet, juicy, and graded for consistency in size and colour. Perfect for hotels and dessert parlours." },
-      { id: "fr-2", name: "Valencia Oranges", typicalPackSize: "15kg Box (80-100 count)", origin: "Spain / South Africa", description: "Juicy, high-yield oranges ideal for fresh juice extraction or catering segments." },
-      { id: "fr-3", name: "Gala Apples", typicalPackSize: "12kg Crates (approx. 70 count)", origin: "Kent, UK / France", description: "Crisp and sweet with consistent colouration, a staple for school catering and retail." },
-      { id: "fr-4", name: "Seedless Green Grapes", typicalPackSize: "10 x 500g Punnets", origin: "Chile / South Africa", description: "Plump, sweet, and firm texture seedless grapes selected for exceptional shelf life." },
-      { id: "fr-5", name: "Premium Cavendish Bananas", typicalPackSize: "13.5kg Box", origin: "Costa Rica / Ecuador", description: "Available in custom ripeness stages from bright green to perfect yellow." },
-      { id: "fr-6", name: "Primofiore Lemons", typicalPackSize: "10kg Box", origin: "Sicily, Italy", description: "Unwaxed, aromatic lemons with high juice content, essential for premium bar and kitchen service." },
-      { id: "fr-7", name: "Seedless Persian Limes", typicalPackSize: "4kg Box", origin: "Mexico / Brazil", description: "Deep green, extremely juicy limes chosen for excellent skin quality and intense flavor." }
+      { id: "fr-1", name: "Premium Strawberries", typicalPackSize: "10 x 400g Punnet", origin: "Brazil", description: "Sweet, juicy, and graded for consistency in size and colour. Perfect for hotels and dessert parlours." },
+      { id: "fr-2", name: "Valencia Oranges", typicalPackSize: "15kg Box (80-100 count)", origin: "Brazil", description: "Juicy, high-yield oranges ideal for fresh juice extraction or catering segments." },
+      { id: "fr-3", name: "Gala Apples", typicalPackSize: "12kg Crates (approx. 70 count)", origin: "Brazil", description: "Crisp and sweet with consistent colouration, a staple for school catering and retail." },
+      { id: "fr-4", name: "Seedless Green Grapes", typicalPackSize: "10 x 500g Punnets", origin: "Brazil", description: "Plump, sweet, and firm texture seedless grapes selected for exceptional shelf life." },
+      { id: "fr-5", name: "Premium Cavendish Bananas", typicalPackSize: "13.5kg Box", origin: "Brazil", description: "Available in custom ripeness stages from bright green to perfect yellow." },
+      { id: "fr-6", name: "Primofiore Lemons", typicalPackSize: "10kg Box", origin: "Brazil", description: "Unwaxed, aromatic lemons with high juice content, essential for premium bar and kitchen service." },
+      { id: "fr-7", name: "Seedless Persian Limes", typicalPackSize: "4kg Box", origin: "Brazil", description: "Deep green, extremely juicy limes chosen for excellent skin quality and intense flavor." }
     ]
   },
   {
@@ -63,14 +63,14 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "An extensive selection of fresh, crisp root, green, and vine vegetables delivered daily.",
     image: IMAGES.categoryVeg,
     popularItems: [
-      { id: "vg-1", name: "Tenderstem Broccoli", typicalPackSize: "20 x 200g Bundles", origin: "Lincolnshire, UK / Kenya", description: "Sweet, tender stems, hand-harvested and immediately cooled to maintain maximum snap." },
-      { id: "vg-2", name: "Chantenay Carrots", typicalPackSize: "10kg Bag", origin: "Nottinghamshire, UK", description: "Sweet, crunchy baby carrots with smooth skin, ideal for premium commercial roasting." },
-      { id: "vg-3", name: "Mixed Bell Peppers (R/Y/G)", typicalPackSize: "5kg Box", origin: "Netherlands / Spain", description: "Thick-walled, sweet peppers graded perfectly for uniform sizing and premium texture." },
-      { id: "vg-4", name: "Beefsteak Tomatoes", typicalPackSize: "6kg Box", origin: "Isle of Wight, UK / Spain", description: "Meaty, rich tomatoes with balanced acidity, ideal for high-end burgers, slicing, and sauces." },
-      { id: "vg-5", name: "Iceberg Lettuce", typicalPackSize: "12 Heads per Box", origin: "Cambridgeshire, UK / Spain", description: "Compact, crunchy, and clean heads. Vacuum-cooled directly at harvest to preserve freshness." },
-      { id: "vg-6", name: "English Cucumbers", typicalPackSize: "12 Pieces", origin: "Hertfordshire, UK", description: "Firm, straight, and glossy cucumbers sourced from trusted British glasshouses." },
-      { id: "vg-7", name: "Red & White Spanish Onions", typicalPackSize: "20kg Bag", origin: "Spain / UK", description: "Large caliber onions with excellent skin cover, ideal for high-volume prep kitchens." },
-      { id: "vg-8", name: "Maris Piper Potatoes", typicalPackSize: "25kg Paper Sack", origin: "Cambridgeshire, UK", description: "The definitive choice for roasting and chips, dried-brushed and graded for professional kitchens." }
+      { id: "vg-1", name: "Tenderstem Broccoli", typicalPackSize: "20 x 200g Bundles", origin: "Brazil", description: "Sweet, tender stems, hand-harvested and immediately cooled to maintain maximum snap." },
+      { id: "vg-2", name: "Chantenay Carrots", typicalPackSize: "10kg Bag", origin: "Brazil", description: "Sweet, crunchy baby carrots with smooth skin, ideal for premium commercial roasting." },
+      { id: "vg-3", name: "Mixed Bell Peppers (R/Y/G)", typicalPackSize: "5kg Box", origin: "Brazil", description: "Thick-walled, sweet peppers graded perfectly for uniform sizing and premium texture." },
+      { id: "vg-4", name: "Beefsteak Tomatoes", typicalPackSize: "6kg Box", origin: "Brazil", description: "Meaty, rich tomatoes with balanced acidity, ideal for high-end burgers, slicing, and sauces." },
+      { id: "vg-5", name: "Iceberg Lettuce", typicalPackSize: "12 Heads per Box", origin: "Brazil", description: "Compact, crunchy, and clean heads. Vacuum-cooled directly at harvest to preserve freshness." },
+      { id: "vg-6", name: "English Cucumbers", typicalPackSize: "12 Pieces", origin: "Brazil", description: "Firm, straight, and glossy cucumbers sourced from trusted British glasshouses." },
+      { id: "vg-7", name: "Red & White Spanish Onions", typicalPackSize: "20kg Bag", origin: "Brazil", description: "Large caliber onions with excellent skin cover, ideal for high-volume prep kitchens." },
+      { id: "vg-8", name: "Maris Piper Potatoes", typicalPackSize: "25kg Paper Sack", origin: "Brazil", description: "The definitive choice for roasting and chips, dried-brushed and graded for professional kitchens." }
     ]
   },
   {
@@ -79,11 +79,11 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Crisp, vibrant, and multi-washed salad greens sourced from leading British and Mediterranean growers.",
     image: IMAGES.categorySalad,
     popularItems: [
-      { id: "sl-1", name: "Mixed Baby Salad Leaves", typicalPackSize: "1kg Bag (Washed & Ready)", origin: "UK / Italy", description: "An elegant blend of chard, tatsoi, mizuna, and red mustard greens. Sized for perfect plating." },
-      { id: "sl-2", name: "Wild Italian Rocket", typicalPackSize: "1kg Bag (Triple-Washed)", origin: "Italy / UK", description: "Aromatic, peppery, and dark green leaves that add distinct bite and elegance to any dish." },
-      { id: "sl-3", name: "Baby Spinach Leaves", typicalPackSize: "1.5kg Bag", origin: "Lincolnshire, UK / Spain", description: "Tender, young spinach leaves, triple-washed and dried with modern centrifugal systems." },
-      { id: "sl-4", name: "Fresh Watercress", typicalPackSize: "10 x 85g Bunches", origin: "Hampshire, UK", description: "Pungent and crisp, grown in natural mineral-rich spring water beds for supreme quality." },
-      { id: "sl-5", name: "Red Radicchio Heads", typicalPackSize: "3kg Box", origin: "Veneto, Italy", description: "Bitter, beautiful wine-red leaves with crisp white ribs, adding high visual contrast to salads." }
+      { id: "sl-1", name: "Mixed Baby Salad Leaves", typicalPackSize: "1kg Bag (Washed & Ready)", origin: "Brazil", description: "An elegant blend of chard, tatsoi, mizuna, and red mustard greens. Sized for perfect plating." },
+      { id: "sl-2", name: "Wild Italian Rocket", typicalPackSize: "1kg Bag (Triple-Washed)", origin: "Brazil", description: "Aromatic, peppery, and dark green leaves that add distinct bite and elegance to any dish." },
+      { id: "sl-3", name: "Baby Spinach Leaves", typicalPackSize: "1.5kg Bag", origin: "Brazil", description: "Tender, young spinach leaves, triple-washed and dried with modern centrifugal systems." },
+      { id: "sl-4", name: "Fresh Watercress", typicalPackSize: "10 x 85g Bunches", origin: "Brazil", description: "Pungent and crisp, grown in natural mineral-rich spring water beds for supreme quality." },
+      { id: "sl-5", name: "Red Radicchio Heads", typicalPackSize: "3kg Box", origin: "Brazil", description: "Bitter, beautiful wine-red leaves with crisp white ribs, adding high visual contrast to salads." }
     ]
   },
   {
@@ -92,11 +92,11 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Highly aromatic, fresh-cut herbs delivered in specialized breathable packaging to preserve essential oils.",
     image: IMAGES.categoryHerbs,
     popularItems: [
-      { id: "hb-1", name: "Fresh Mint", typicalPackSize: "1kg Bag / 10 Bunches", origin: "UK / Israel", description: "Fragrant, large leaf mint, essential for premium bars, mojitos, Middle-Eastern cuisine, and sauces." },
-      { id: "hb-2", name: "Sweet Genovese Basil", typicalPackSize: "500g Bag", origin: "UK / Italy", description: "Delicate, sweet, and highly aromatic. Transported under strict temperature control to prevent blackening." },
-      { id: "hb-3", name: "Coriander (Cilantro)", typicalPackSize: "1kg Bag", origin: "UK / Spain / Morocco", description: "Strong roots, bright green leaves, and intense citrusy scent. Graded for minimized stalk content." },
-      { id: "hb-4", name: "English Thyme", typicalPackSize: "500g Bunch", origin: "UK / Kenya", description: "Woody, aromatic sprigs packed with high essential oil levels, perfect for slow roasting and broths." },
-      { id: "hb-5", name: "Rosemary", typicalPackSize: "500g Bunch", origin: "UK / Spain", description: "Resinous and pine-scented sprigs selected for consistent stalk strength and rich color." }
+      { id: "hb-1", name: "Fresh Mint", typicalPackSize: "1kg Bag / 10 Bunches", origin: "Brazil", description: "Fragrant, large leaf mint, essential for premium bars, mojitos, Middle-Eastern cuisine, and sauces." },
+      { id: "hb-2", name: "Sweet Genovese Basil", typicalPackSize: "500g Bag", origin: "Brazil", description: "Delicate, sweet, and highly aromatic. Transported under strict temperature control to prevent blackening." },
+      { id: "hb-3", name: "Coriander (Cilantro)", typicalPackSize: "1kg Bag", origin: "Brazil", description: "Strong roots, bright green leaves, and intense citrusy scent. Graded for minimized stalk content." },
+      { id: "hb-4", name: "English Thyme", typicalPackSize: "500g Bunch", origin: "Brazil", description: "Woody, aromatic sprigs packed with high essential oil levels, perfect for slow roasting and broths." },
+      { id: "hb-5", name: "Rosemary", typicalPackSize: "500g Bunch", origin: "Brazil", description: "Resinous and pine-scented sprigs selected for consistent stalk strength and rich color." }
     ]
   },
   {
@@ -105,11 +105,11 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     description: "Specialist tropical fruits, roots, and rare ingredients sourced directly from global farming partners.",
     image: IMAGES.categoryExotics,
     popularItems: [
-      { id: "ex-1", name: "Hass Avocados (Ready to Eat)", typicalPackSize: "Tray of 16-18 count", origin: "Peru / South Africa", description: "Perfectly pre-ripened Hass avocados with buttery flesh and rich nutty flavour." },
-      { id: "ex-2", name: "Kent Mangoes", typicalPackSize: "4kg Box (9-12 count)", origin: "Brazil / India", description: "Fiberless, incredibly sweet, and juicy mangoes selected for premium culinary applications." },
-      { id: "ex-3", name: "Yellow Ginger Root", typicalPackSize: "5kg Box", origin: "China / Brazil", description: "Plump, clean, and low-fibred rhizomes that offer hot, spicy, and zesty aroma." },
-      { id: "ex-4", name: "Thai Lemongrass", typicalPackSize: "1kg Bundle", origin: "Thailand", description: "Extremely fragrant stalks, crucial for authentic Asian cuisine and high-end cocktail mixology." },
-      { id: "ex-5", name: "Premium Dragon Fruit (Pitaya)", typicalPackSize: "3kg Box", origin: "Vietnam", description: "Stunning vibrant exterior with speckled magenta or white pulp, adding luxury appeal to dishes." }
+      { id: "ex-1", name: "Hass Avocados (Ready to Eat)", typicalPackSize: "Tray of 16-18 count", origin: "Brazil", description: "Perfectly pre-ripened Hass avocados with buttery flesh and rich nutty flavour." },
+      { id: "ex-2", name: "Kent Mangoes", typicalPackSize: "4kg Box (9-12 count)", origin: "Brazil", description: "Fiberless, incredibly sweet, and juicy mangoes selected for premium culinary applications." },
+      { id: "ex-3", name: "Yellow Ginger Root", typicalPackSize: "5kg Box", origin: "Brazil", description: "Plump, clean, and low-fibred rhizomes that offer hot, spicy, and zesty aroma." },
+      { id: "ex-4", name: "Thai Lemongrass", typicalPackSize: "1kg Bundle", origin: "Brazil", description: "Extremely fragrant stalks, crucial for authentic Asian cuisine and high-end cocktail mixology." },
+      { id: "ex-5", name: "Premium Dragon Fruit (Pitaya)", typicalPackSize: "3kg Box", origin: "Brazil", description: "Stunning vibrant exterior with speckled magenta or white pulp, adding luxury appeal to dishes." }
     ]
   },
   {

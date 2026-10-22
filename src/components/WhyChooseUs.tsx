@@ -11,7 +11,7 @@ export default function WhyChooseUs() {
     {
       icon: <Sprout className="w-8 h-8" />,
       title: "Farm Fresh Produce",
-      desc: "Sourced directly from BRCGS-vetted British and European growers. Sliced and shipped within hours of harvest to ensure peak freshness."
+      desc: "Sourced directly from BRCGS-vetted Brazilian growers. Sliced and shipped within hours of harvest to ensure peak freshness."
     },
     {
       icon: <Truck className="w-8 h-8" />,

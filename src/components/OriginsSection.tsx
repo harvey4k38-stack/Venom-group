@@ -9,46 +9,6 @@ import { Globe, Leaf, Thermometer, ShieldCheck } from "lucide-react";
 const origins = [
   {
     id: "01",
-    country: "Costa Rica",
-    flag: "🇨🇷",
-    region: "Central America",
-    produce: ["Pineapple", "Banana", "Tropical"],
-    description: "Sun-drenched volcanic soils produce world-class pineapples with unmatched sweetness and consistent sizing year-round.",
-    image: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?q=80&w=1200&auto=format&fit=crop",
-    accent: "from-emerald-900/90"
-  },
-  {
-    id: "02",
-    country: "Ecuador",
-    flag: "🇪🇨",
-    region: "South America",
-    produce: ["Banana", "Mango", "Dragon Fruit"],
-    description: "The equatorial climate creates ideal conditions for premium Cavendish bananas with exceptional ripeness control.",
-    image: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?q=80&w=1200&auto=format&fit=crop",
-    accent: "from-yellow-900/90"
-  },
-  {
-    id: "03",
-    country: "South Africa",
-    flag: "🇿🇦",
-    region: "Southern Africa",
-    produce: ["Citrus", "Stone Fruit", "Grapes"],
-    description: "The Cape's Mediterranean climate nurtures premium citrus and stone fruit with extraordinary colour, juice yield, and shelf life.",
-    image: "https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?q=80&w=1200&auto=format&fit=crop",
-    accent: "from-orange-900/90"
-  },
-  {
-    id: "04",
-    country: "Ghana",
-    flag: "🇬🇭",
-    region: "West Africa",
-    produce: ["Pineapple", "Papaya", "Tropical"],
-    description: "Ghana's fertile equatorial belt delivers ultra-sweet MD2 pineapples and vibrant papayas direct from ethical farm cooperatives.",
-    image: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=1200&auto=format&fit=crop",
-    accent: "from-amber-900/90"
-  },
-  {
-    id: "05",
     country: "Brazil",
     flag: "🇧🇷",
     region: "South America",
@@ -56,41 +16,11 @@ const origins = [
     description: "Brazil's vast agricultural heartland produces the finest honeydew and cantaloupe melons alongside aromatic Kent mangoes.",
     image: "https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=1200&auto=format&fit=crop",
     accent: "from-lime-900/90"
-  },
-  {
-    id: "06",
-    country: "Spain",
-    flag: "🇪🇸",
-    region: "Southern Europe",
-    produce: ["Citrus", "Berries", "Vegetables"],
-    description: "Andalucía and Valencia deliver the finest Primofiore lemons, navel oranges, and premium berry varieties with class-leading appearance.",
-    image: "https://images.unsplash.com/photo-1598887142487-3c854d51eabb?q=80&w=1200&auto=format&fit=crop",
-    accent: "from-red-900/90"
-  },
-  {
-    id: "07",
-    country: "Holland",
-    flag: "🇳🇱",
-    region: "Northern Europe",
-    produce: ["Peppers", "Tomatoes", "Salad"],
-    description: "Dutch precision greenhouse technology produces year-round bell peppers, vine tomatoes, and salad crops to exacting commercial specifications.",
-    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=1200&auto=format&fit=crop",
-    accent: "from-orange-900/90"
-  },
-  {
-    id: "08",
-    country: "Morocco",
-    flag: "🇲🇦",
-    region: "North Africa",
-    produce: ["Citrus", "Tomatoes", "Berries"],
-    description: "Atlas Mountain foothills and coastal plains yield exceptional clementines, early-season tomatoes, and premium strawberries.",
-    image: "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?q=80&w=1200&auto=format&fit=crop",
-    accent: "from-red-900/90"
   }
 ];
 
 const stats = [
-  { value: "8", label: "Source Countries", icon: <Globe className="w-5 h-5" /> },
+  { value: "1", label: "Source Country", icon: <Globe className="w-5 h-5" /> },
   { value: "365", label: "Days Active", icon: <Leaf className="w-5 h-5" /> },
   { value: "2–4°C", label: "Cold Chain Temp", icon: <Thermometer className="w-5 h-5" /> },
   { value: "BRCGS", label: "All Partners Certified", icon: <ShieldCheck className="w-5 h-5" /> }
@@ -144,7 +74,7 @@ export default function OriginsSection() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-gray-400 font-sans text-lg md:text-xl leading-relaxed max-w-2xl mx-auto font-light"
             >
-              Every item in our range is traceable to a specific farm partner across 8 carefully selected countries — chosen for climate, soil quality, and BRCGS compliance.
+              Every item in our range is traceable to a specific farm partner from Brazil — chosen for climate, soil quality, and BRCGS compliance.
             </motion.p>
           </div>
 
@@ -172,7 +102,7 @@ export default function OriginsSection() {
 
       {/* Country Cards Grid */}
       <div className="max-w-7xl mx-auto px-6 md:px-12 pb-24 md:pb-32">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 max-w-sm mx-auto gap-5">
           {origins.map((origin, index) => (
             <motion.div
               key={origin.id}

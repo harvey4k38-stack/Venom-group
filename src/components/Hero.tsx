@@ -169,7 +169,7 @@ export default function Hero({ onRequestQuote, onViewProducts }: HeroProps) {
             
             <h3 className="font-display font-bold text-xl text-white">Daily Dispatch Active</h3>
             <p className="text-gray-400 text-sm font-sans">
-              Our refrigerated logistics fleet distributes 100% chilled British and continental produce to major UK cities overnight.
+              Our refrigerated logistics fleet distributes 100% chilled Brazilian produce to major UK cities overnight.
             </p>
             
             <div className="space-y-4 border-t border-white/10 pt-6">
