@@ -19,7 +19,7 @@ export default function CtaSection({ onRequestQuote }: CtaSectionProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="premium-card relative bg-gradient-to-br from-forest to-[#0d3d11] rounded-[20px] p-8 md:p-20 shadow-md border border-black/5 overflow-hidden text-center"
+          className="premium-card relative bg-gradient-to-br from-forest to-[#991B1B] rounded-[20px] p-8 md:p-20 shadow-md border border-black/5 overflow-hidden text-center"
         >
           {/* Decorative mesh glows */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-leaf/20 rounded-full filter blur-[100px] pointer-events-none" />

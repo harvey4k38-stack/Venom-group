@@ -7,12 +7,12 @@
   --font-serif: "Playfair Display", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 
-  --color-forest: #1B5E20;
-  --color-forest-hover: #154d1a;
-  --color-leaf: #43A047;
-  --color-leaf-hover: #388E3C;
-  --color-charcoal: #222222;
-  --color-light-grey: #F5F5F5;
+  --color-forest: #DC2626;
+  --color-forest-hover: #B91C1C;
+  --color-leaf: #DC2626;
+  --color-leaf-hover: #B91C1C;
+  --color-charcoal: #111113;
+  --color-light-grey: #F8F9FA;
 }
 
 /* Custom smooth scrolling */
@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #F5F5F5;
+  background-color: #F8F9FA;
   color: var(--color-charcoal);
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
@@ -83,14 +83,14 @@ button, a, [role="button"] {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F5F5F5;
+  background: #F8F9FA;
 }
 ::-webkit-scrollbar-thumb {
-  background: #C8E6C9;
+  background: #FECACA;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #43A047;
+  background: #DC2626;
 }
 
 .no-scrollbar {

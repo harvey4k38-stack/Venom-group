@@ -94,7 +94,7 @@ export default function Header({ page, onNavigate, onGoToDrinks, onRequestQuote 
                 {/* Elegant snake head detail */}
                 <circle cx="80" cy="31" r="5" className="fill-white stroke-none" />
                 {/* Leaf accent representing freshness */}
-                <path d="M25,25 C35,15 45,20 45,20" stroke="#43A047" strokeWidth="6" />
+                <path d="M25,25 C35,15 45,20 45,20" stroke="#FCA5A5" strokeWidth="6" />
               </svg>
               <div className="absolute inset-0 bg-gradient-to-tr from-transparent to-white/10" />
             </div>

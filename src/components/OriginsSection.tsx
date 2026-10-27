@@ -15,7 +15,7 @@ const origins = [
     produce: ["Melon", "Mango", "Lime"],
     description: "Brazil's vast agricultural heartland produces the finest honeydew and cantaloupe melons alongside aromatic Kent mangoes.",
     image: "https://images.unsplash.com/photo-1543362906-acfc16c67564?q=80&w=1200&auto=format&fit=crop",
-    accent: "from-lime-900/90"
+    accent: "from-red-900/90"
   }
 ];
 
@@ -61,7 +61,7 @@ export default function OriginsSection() {
               className="font-display font-extrabold text-4xl md:text-6xl lg:text-7xl text-white tracking-tight leading-tight"
             >
               Sourced From The{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-leaf via-[#81C784] to-white">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-leaf via-[#F87171] to-white">
                 World's Finest
               </span>{" "}
               Growing Regions

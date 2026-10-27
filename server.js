@@ -30,9 +30,9 @@ app.post('/api/enquiry', async (req, res) => {
       subject: `New Wholesale Enquiry — ${form.companyName}`,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px;background:#f5f5f5">
-          <div style="background:#1B5E20;padding:24px 32px;border-radius:12px 12px 0 0">
+          <div style="background:#DC2626;padding:24px 32px;border-radius:12px 12px 0 0">
             <h1 style="color:#fff;margin:0;font-size:20px">New Wholesale Enquiry</h1>
-            <p style="color:#81C784;margin:4px 0 0;font-size:13px">Submitted via venomgroup.co.uk</p>
+            <p style="color:#FECACA;margin:4px 0 0;font-size:13px">Submitted via venomgroup.co.uk</p>
           </div>
           <div style="background:#fff;padding:32px;border-radius:0 0 12px 12px;border:1px solid #e0e0e0">
             <table style="width:100%;border-collapse:collapse;font-size:14px">

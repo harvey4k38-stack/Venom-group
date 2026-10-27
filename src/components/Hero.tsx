@@ -97,9 +97,9 @@ export default function Hero({ onRequestQuote, onViewProducts }: HeroProps) {
                 transition={{ duration: 0.8, delay: 0.1 }}
                 className="font-display font-extrabold text-[2.4rem] sm:text-5xl md:text-7xl lg:text-8xl text-white tracking-tight leading-[0.95]"
               >
-                Fresh Produce.
+                Fresh Produce &amp; Beverages.
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-leaf via-[#81C784] to-white">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-leaf via-[#F87171] to-white">
                   Delivered With Quality.
                 </span>
               </motion.h1>

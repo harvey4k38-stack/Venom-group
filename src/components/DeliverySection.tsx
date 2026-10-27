@@ -165,8 +165,8 @@ export default function DeliverySection() {
                        C 60 52, 65 48, 64 42
                        C 63 36, 52 32, 50 28
                        C 48 24, 44 14, 40 10 Z"
-                    fill="#F0F4F1"
-                    stroke="#E0E8E1"
+                    fill="#F4F4F5"
+                    stroke="#E4E4E7"
                     strokeWidth="1.2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -179,7 +179,7 @@ export default function DeliverySection() {
                       animate={{ pathLength: 1, opacity: 0.6 }}
                       transition={{ duration: 0.8, ease: "easeOut" }}
                       d={`M 58 76 L ${hubs.find(h => h.name === hoveredHub)?.cx} ${hubs.find(h => h.name === hoveredHub)?.cy}`}
-                      stroke="#43A047"
+                      stroke="#DC2626"
                       strokeWidth="1.5"
                       strokeDasharray="4,4"
                       fill="none"
@@ -195,14 +195,14 @@ export default function DeliverySection() {
                       onMouseLeave={() => setHoveredHub(null)}
                     >
                       {/* Pulse Circle */}
-                      <circle cx={hub.cx} cy={hub.cy} r="3" fill="#43A047" className="animate-ping" style={{ transformOrigin: `${hub.cx} ${hub.cy}` }} />
+                      <circle cx={hub.cx} cy={hub.cy} r="3" fill="#DC2626" className="animate-ping" style={{ transformOrigin: `${hub.cx} ${hub.cy}` }} />
                       
                       {/* Core Dot */}
                       <circle
                         cx={hub.cx}
                         cy={hub.cy}
                         r={hoveredHub === hub.name ? "2.5" : "1.8"}
-                        fill={hoveredHub === hub.name ? "#1B5E20" : "#43A047"}
+                        fill={hoveredHub === hub.name ? "#B91C1C" : "#DC2626"}
                         stroke="#FFFFFF"
                         strokeWidth="0.8"
                         transition="all 0.2s"
