@@ -8,13 +8,19 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 interface HeaderProps {
+  page: "home" | "drinks";
+  onNavigate: (id: string) => void;
+  onGoToDrinks: () => void;
   onRequestQuote: () => void;
 }
 
-export default function Header({ onRequestQuote }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
+export default function Header({ page, onNavigate, onGoToDrinks, onRequestQuote }: HeaderProps) {
+  const [scrolledState, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
+  const [sectionState, setActiveSection] = useState("home");
+  // The Drinks page has no dark hero, so the header stays in its solid style there.
+  const isScrolled = scrolledState || page === "drinks";
+  const activeSection = page === "drinks" ? "drinks" : sectionState;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,6 +50,7 @@ export default function Header({ onRequestQuote }: HeaderProps) {
   const menuItems = [
     { id: "home", label: "Home" },
     { id: "products", label: "Products" },
+    { id: "drinks", label: "Drinks" },
     { id: "origins", label: "Origins" },
     { id: "industries", label: "Industries" },
     { id: "about", label: "About" },
@@ -53,16 +60,8 @@ export default function Header({ onRequestQuote }: HeaderProps) {
 
   const handleNavClick = (id: string) => {
     setIsMobileMenuOpen(false);
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
+    if (id === "drinks") onGoToDrinks();
+    else onNavigate(id);
   };
 
   return (

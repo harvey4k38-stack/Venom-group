@@ -92,3 +92,11 @@ button, a, [role="button"] {
 ::-webkit-scrollbar-thumb:hover {
   background: #43A047;
 }
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
