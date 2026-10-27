@@ -49,10 +49,10 @@ export default function EnquiryForm() {
   const standardProductCategories = [
     "Fresh Fruit",
     "Fresh Vegetables",
-    "Salad Leaves",
     "Fresh Herbs",
     "Exotic Produce",
-    "Prepared Produce"
+    "Prepared Produce",
+    "Drinks"
   ];
 
   const handleCheckboxChange = (category: string) => {
@@ -306,7 +306,7 @@ export default function EnquiryForm() {
                     <textarea
                       id="message"
                       rows={4}
-                      placeholder="List any specific fruit/vegetable items, delivery schedules, or custom specifications required..."
+                      placeholder="List any specific fruit, vegetable or drink items, delivery schedules, or custom specifications required..."
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
                       className="w-full bg-white border border-gray-200 rounded-xl py-3 px-4 font-sans text-sm focus:outline-none focus:border-forest focus:ring-1 focus:ring-forest transition-all resize-none"

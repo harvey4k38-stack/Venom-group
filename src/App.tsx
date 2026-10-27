@@ -78,7 +78,7 @@ export default function App() {
           />
           <TrustedBy />
           <AboutSection onLearnMore={() => scrollToSection("delivery")} />
-          <ProductsSection onRequestQuote={() => scrollToSection("contact")} />
+          <ProductsSection onRequestQuote={() => scrollToSection("contact")} onGoToDrinks={goToDrinks} />
           <WhyChooseUs />
           <OriginsSection />
           <IndustriesSection />

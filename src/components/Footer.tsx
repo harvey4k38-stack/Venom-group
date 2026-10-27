@@ -35,7 +35,7 @@ export default function Footer() {
   const productLinks = [
     { label: "Fresh Fruit", href: "#products" },
     { label: "Fresh Vegetables", href: "#products" },
-    { label: "Salads & Leaves", href: "#products" },
+    { label: "Drinks", href: "#/drinks" },
     { label: "Fresh Herbs", href: "#products" },
     { label: "Exotic Produce", href: "#products" },
     { label: "Prepared Produce", href: "#products" }
@@ -71,7 +71,7 @@ export default function Footer() {
             </div>
 
             <p className="text-gray-400 text-sm leading-relaxed font-light">
-              Premium B2B wholesale fruit and vegetable partner. Supplying Michelin-starred dining, regional hospitality hubs, and academies across mainland UK with certified cold-chain logistics daily.
+              Premium B2B wholesale fruit, vegetable and drinks partner. Supplying Michelin-starred dining, regional hospitality hubs, and academies across mainland UK with certified cold-chain logistics daily.
             </p>
 
             {/* Newsletter form */}

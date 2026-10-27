@@ -11,9 +11,10 @@ import { ProductCategory } from "../types";
 
 interface ProductsSectionProps {
   onRequestQuote: () => void;
+  onGoToDrinks: () => void;
 }
 
-export default function ProductsSection({ onRequestQuote }: ProductsSectionProps) {
+export default function ProductsSection({ onRequestQuote, onGoToDrinks }: ProductsSectionProps) {
   const [selectedCategory, setSelectedCategory] = useState<ProductCategory | null>(null);
 
   return (
@@ -42,7 +43,7 @@ export default function ProductsSection({ onRequestQuote }: ProductsSectionProps
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              onClick={() => setSelectedCategory(category)}
+              onClick={() => (category.id === "drinks" ? onGoToDrinks() : setSelectedCategory(category))}
               className="premium-card group relative h-[380px] rounded-[20px] overflow-hidden border border-black/5 hover:-translate-y-1.5 hover:shadow-lg transition-all duration-300 cursor-pointer"
             >
               <img
@@ -65,7 +66,7 @@ export default function ProductsSection({ onRequestQuote }: ProductsSectionProps
                   {category.description}
                 </p>
                 <div className="flex items-center gap-2 font-display text-xs font-bold text-leaf group-hover:text-white pt-2 transition-colors duration-300">
-                  <span>Explore Produce List</span>
+                  <span>{category.id === "drinks" ? "Browse Drinks Catalogue" : "Explore Produce List"}</span>
                   <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </div>
               </div>

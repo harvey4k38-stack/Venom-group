@@ -100,3 +100,15 @@ button, a, [role="button"] {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* Brands We Sell logo carousel */
+@keyframes brand-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-brand-marquee {
+  animation: brand-marquee 35s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-brand-marquee { animation: none; }
+}

@@ -112,7 +112,7 @@ export default function Hero({ onRequestQuote, onViewProducts }: HeroProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-gray-300 font-sans text-lg md:text-xl leading-relaxed max-w-2xl font-light"
             >
-              Venom Group supplies premium wholesale fruit and vegetables to restaurants, hotels, schools, retailers and food service businesses across the UK.
+              Venom Group supplies premium wholesale fruit, vegetables and drinks to restaurants, hotels, schools, retailers and food service businesses across the UK.
             </motion.p>
 
             {/* Trust Badges */}

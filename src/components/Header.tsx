@@ -103,7 +103,7 @@ export default function Header({ page, onNavigate, onGoToDrinks, onRequestQuote 
                 VENOM<span className="text-leaf">GROUP</span>
               </span>
               <span className="font-mono text-[8px] tracking-[0.25em] text-gray-400 uppercase leading-none mt-1">
-                Wholesale Produce
+                Wholesale Produce & Drinks
               </span>
             </div>
           </div>

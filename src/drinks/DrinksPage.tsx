@@ -8,6 +8,7 @@ import { Search, Package, ArrowRight, RefreshCw } from "lucide-react";
 import { PRODUCTS, CATEGORIES } from "./products";
 import { BRANDS } from "./brands";
 import { ProductVisual } from "./ProductVisual";
+import BrandsStrip from "./BrandsStrip";
 
 interface DrinksPageProps {
   onRequestQuote: () => void;
@@ -42,11 +43,21 @@ export default function DrinksPage({ onRequestQuote }: DrinksPageProps) {
     setSearchQuery("");
   };
 
+  const showCatalogue = (category: string, brand: string) => {
+    setSelectedCategory(category);
+    setSelectedBrand(brand);
+    setContainerFilter("all");
+    setSearchQuery("");
+    const el = document.getElementById("drinks-catalogue");
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 80, behavior: "smooth" });
+  };
+
   const hasFilters =
     selectedCategory !== "all" || selectedBrand !== "all" || containerFilter !== "all" || searchQuery !== "";
 
   return (
-    <section id="drinks" className="pt-32 pb-24 bg-light-grey min-h-screen">
+    <>
+    <section id="drinks" className="pt-32 pb-20 bg-light-grey">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Title */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 border-b border-gray-200">
@@ -71,8 +82,58 @@ export default function DrinksPage({ onRequestQuote }: DrinksPageProps) {
           </button>
         </div>
 
+        {/* Category tiles */}
+        <div className="mt-12 flex flex-col sm:flex-row sm:items-end justify-between mb-8">
+          <div>
+            <span className="font-mono text-xs font-bold uppercase tracking-widest text-leaf">Commercial Inventory</span>
+            <h2 className="font-display font-extrabold text-2xl md:text-3xl text-charcoal tracking-tight mt-2">
+              Explore Wholesale Product Categories
+            </h2>
+          </div>
+          <button
+            onClick={() => showCatalogue("all", "all")}
+            className="mt-4 sm:mt-0 text-xs font-bold uppercase tracking-wider text-forest hover:text-forest-hover flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>View Full Catalogue</span>
+            <ArrowRight className="w-4 h-4" />
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {CATEGORIES.map((cat) => (
+            <div
+              key={cat.id}
+              onClick={() => showCatalogue(cat.id, "all")}
+              className="group p-6 rounded-2xl border border-gray-200 bg-white hover:border-forest hover:shadow-md transition-all cursor-pointer flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-bold text-leaf font-mono uppercase">Category {cat.id}</span>
+                  <span className="text-xs text-gray-500 font-mono">
+                    {PRODUCTS.filter((p) => p.category === cat.id).length} Core Lines
+                  </span>
+                </div>
+                <h3 className="font-display font-bold text-xl text-charcoal group-hover:text-forest transition-colors">
+                  {cat.name}
+                </h3>
+                <p className="text-sm text-gray-600 mt-2 leading-relaxed">{cat.description}</p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-gray-200/60 flex items-center justify-between text-xs font-bold text-forest">
+                <span>Browse Category Lines</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <BrandsStrip onBrandClick={(brand) => showCatalogue("all", brand)} />
+
+    <section id="drinks-catalogue" className="py-16 pb-24 bg-light-grey min-h-screen">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* Filters */}
-        <div className="mt-8 bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-4">
+        <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="md:col-span-2 relative">
               <Search className="w-5 h-5 text-gray-400 absolute left-3.5 top-3" />
@@ -245,7 +306,21 @@ export default function DrinksPage({ onRequestQuote }: DrinksPageProps) {
             Request A Quote
           </button>
         </div>
+
+        {/* Trade & trademark disclaimer */}
+        <div className="mt-10 text-[11px] leading-relaxed text-gray-500 max-w-4xl">
+          <p className="font-bold uppercase tracking-wider text-gray-600 mb-1">Trade &amp; Trademark Disclaimer</p>
+          <p>
+            Venom Group is an independent wholesale distributor of fast-moving consumer goods. All brand names, logos,
+            trademarks, and registered marks displayed on this website (including Coca-Cola, Pepsi, Red Bull, Monster,
+            Lucozade, Schweppes, Ribena, Rubicon, Tango, Fanta, Sprite, Evian, Volvic, Robinsons and others) belong
+            strictly to their respective brand owners and manufacturers. Venom Group is not affiliated with, sponsored
+            by, or endorsed by any of these brand owners; brand names and logos are used solely to identify the genuine
+            products we resell.
+          </p>
+        </div>
       </div>
     </section>
+    </>
   );
 }

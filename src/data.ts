@@ -21,7 +21,7 @@ export const IMAGES = {
   // Product categories cover images
   categoryFruit: "https://images.unsplash.com/photo-1482508809494-03688cd42e7e?q=80&w=800&auto=format&fit=crop",
   categoryVeg: "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?q=80&w=800&auto=format&fit=crop",
-  categorySalad: "https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=800&auto=format&fit=crop",
+  categoryDrinks: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?q=80&w=800&auto=format&fit=crop",
   categoryHerbs: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=800&auto=format&fit=crop",
   categoryExotics: "https://images.unsplash.com/photo-1534531173927-aeb928d54385?q=80&w=800&auto=format&fit=crop",
   categoryPrepared: "https://images.unsplash.com/photo-1567137827022-fbe18eff7275?q=80&w=800&auto=format&fit=crop",
@@ -74,17 +74,11 @@ export const PRODUCT_CATEGORIES: ProductCategory[] = [
     ]
   },
   {
-    id: "salads",
-    name: "Salad Leaves",
-    description: "Crisp, vibrant, and multi-washed salad greens sourced from leading British and Mediterranean growers.",
-    image: IMAGES.categorySalad,
-    popularItems: [
-      { id: "sl-1", name: "Mixed Baby Salad Leaves", typicalPackSize: "1kg Bag (Washed & Ready)", origin: "Brazil", description: "An elegant blend of chard, tatsoi, mizuna, and red mustard greens. Sized for perfect plating." },
-      { id: "sl-2", name: "Wild Italian Rocket", typicalPackSize: "1kg Bag (Triple-Washed)", origin: "Brazil", description: "Aromatic, peppery, and dark green leaves that add distinct bite and elegance to any dish." },
-      { id: "sl-3", name: "Baby Spinach Leaves", typicalPackSize: "1.5kg Bag", origin: "Brazil", description: "Tender, young spinach leaves, triple-washed and dried with modern centrifugal systems." },
-      { id: "sl-4", name: "Fresh Watercress", typicalPackSize: "10 x 85g Bunches", origin: "Brazil", description: "Pungent and crisp, grown in natural mineral-rich spring water beds for supreme quality." },
-      { id: "sl-5", name: "Red Radicchio Heads", typicalPackSize: "3kg Box", origin: "Brazil", description: "Bitter, beautiful wine-red leaves with crisp white ribs, adding high visual contrast to salads." }
-    ]
+    id: "drinks",
+    name: "Drinks",
+    description: "Wholesale soft drinks, energy drinks, waters, juices and mixers from leading UK and global brands, supplied by the case or pallet.",
+    image: IMAGES.categoryDrinks,
+    popularItems: []
   },
   {
     id: "herbs",
